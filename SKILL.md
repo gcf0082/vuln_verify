@@ -14,8 +14,9 @@ description: "白盒代码漏洞校验。输入一个漏洞（任意格式、单
 - **TRUE POSITIVE**：构造出了这样的 Payload
 - **FALSE POSITIVE**：证明不可能构造出来
 - **CONDITIONAL**：只有满足特定条件时才能构造出来
+- **无法确认**：信息不足，既构造不出 Payload 也证明不了不可能
 
-不靠直觉，不靠经验，靠能否构造出（或证明不能构造出）一个满足全部条件的输入。
+不靠直觉，不靠经验，靠能否构造出（或证明不能构造出）一个满足全部条件的输入。确认不了就如实说确认不了，不硬下结论。
 
 ---
 
@@ -97,6 +98,7 @@ Payload 未通过证伪 → 修复后重新审查，或降级为 CONDITIONAL / F
 - **TRUE POSITIVE**：Payload 构造成功且通过证伪。先说影响再说技术细节。
 - **FALSE POSITIVE**：证明不可能构造出 Payload。说明哪个条件不可满足、在哪一步。
 - **CONDITIONAL**：只有特定条件满足时才能构造出 Payload。列出所有条件。
+- **无法确认**：信息不足，既构造不出 Payload 也证明不了不可能。必须说明理由——哪部分信息缺失（代码看不到/路径追不下去/变换效果不确定/防护是否有效不确定）、最后能确认到哪一步、需要补充什么才能确认。
 - 附加：置信度（High / Medium / Low，看证据完整性和假设数量）、假设清单（每个假设都是"如果错了裁定会变"的风险点）、证据链摘要。
 
 ---
@@ -114,7 +116,7 @@ Payload 未通过证伪 → 修复后重新审查，或降级为 CONDITIONAL / F
 ## 输出结构
 
 ```markdown
-## 裁定: {TRUE POSITIVE | FALSE POSITIVE | CONDITIONAL}
+## 裁定: {TRUE POSITIVE | FALSE POSITIVE | CONDITIONAL | 无法确认}
 
 ## 漏洞主张摘要
 <规范化的假设>
