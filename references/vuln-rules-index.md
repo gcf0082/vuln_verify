@@ -8,3 +8,4 @@
 |---|---|
 | 命令注入 | command-injection.md |
 | 敏感信息泄露（日志/控制台/错误响应） | log-sensitive-info.md |
+| 环境变量取默认值 | env-default-value.md |
