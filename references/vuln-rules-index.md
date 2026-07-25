@@ -7,6 +7,6 @@
 | 漏洞类型 / 描述场景 | 规则文件 |
 |---|---|
 | 命令注入 | command-injection.md |
-| 敏感信息泄露 | log-sensitive-info.md |
+| 敏感信息泄露 | sensitive-info-leak.md |
 | 认证鉴权缺失 | auth-missing.md |
 | 环境变量取默认值 | env-default-value.md |
