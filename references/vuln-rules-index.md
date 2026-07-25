@@ -10,3 +10,4 @@
 | 敏感信息泄露 | sensitive-info-leak.md |
 | 认证鉴权缺失 | auth-missing.md |
 | 环境变量取默认值 | env-default-value.md |
+| 认证凭据硬编码 | credential-hardcoded.md |
